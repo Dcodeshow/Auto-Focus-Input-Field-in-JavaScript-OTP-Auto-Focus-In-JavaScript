@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D CODE SHOW</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h4 class="text-center mb-3">Enter OTP</h4>
+    <div class="userInput">
+        <input type="text" maxlength="1" class="otpinput">
+        <input type="text" maxlength="1" class="otpinput">
+        <input type="text" maxlength="1" class="otpinput">
+
+    </div>
+
+
+    <!--HTML and CSs already Done will work on Js part
+    you can add many input as you can-->
+
+    <!--JS Code-->
+    <script>
+        //First will select all inputfield
+        var myopt = document.querySelectorAll(".otpinput");
+        //will check in console first.
+        for (var i = 0; i < myopt.length - 1; i++) {
+            myopt[i].addEventListener("keyup", function() {
+                this.nextElementSibling.focus();
+            })
+        }
+    </script>
+
+
+
+</body>
+
+</html>
